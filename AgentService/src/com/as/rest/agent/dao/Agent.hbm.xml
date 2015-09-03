@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+<hibernate-mapping package="com.as.rest.agent.vo">
+	<class name="Agent" table="tblagent" lazy="false">
+
+		<id name="agentId" type="int" column="agentId" >
+			<generator class="assigned"></generator>
+		</id>
+
+		<property name="agentName" type="string" column="agentName"
+			length="255" not-null="false" update="true" />
+
+		<property name="agentAddress" type="string" column="agentAddress"
+			length="255" not-null="false" update="true" />
+
+
+		<property name="city" type="string" column="city" length="255"
+			not-null="false" update="false" />
+
+		<property name="state" type="string" column="state" length="255"
+			not-null="false" update="false" />
+
+		<property name="zipCode" type="string" column="zipCode" length="50"
+			not-null="false" update="false" />
+
+	</class>
+</hibernate-mapping>

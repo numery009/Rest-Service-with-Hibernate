@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+<hibernate-mapping package="org.as.hbsamples.vo">
+	<class name="Department" table="hb_dept_tbl" lazy="false">
+
+		<id name="deptNo" type="int" column="DEPTNO"
+			unsaved-value="null">
+			<generator class="assigned"></generator>
+		</id>
+
+		<property name="deptName" type="string" column="DNAME"
+			length="100" not-null="true" update="true" />
+
+		<property name="deptLoc" type="string" column="LOC" length="100"
+			not-null="true" update="true" />
+	</class>
+</hibernate-mapping>
